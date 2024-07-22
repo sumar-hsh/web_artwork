@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Artwork Details{% endblock %}
+
+{% block content %}
+    <h1>{{ artwork.title }}</h1>
+    <img src="{{ url_for('static', filename='images/' ~ artwork.image_file) }}" alt="{{ artwork.title }}" class="img-fluid">
+    <p>{{ artwork.description }}</p>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary">Back to Home</a>
+{% endblock %}
